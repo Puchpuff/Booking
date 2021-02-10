@@ -1,0 +1,158 @@
+package views;
+ import com.toedter.calendar.JCalendar;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.DateTime;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.custom.CLabel;
+import org.eclipse.swt.custom.CCombo;
+import org.eclipse.swt.custom.StyledText;
+import org.eclipse.wb.swt.SWTResourceManager;
+import com.toedter.calendar.JDateChooser;
+import com.toedter.calendar.JCalendar;
+import com.toedter.calendar.JMonthChooser;
+import org.eclipse.swt.widgets.Composite;
+import java.awt.Frame;
+import org.eclipse.swt.awt.SWT_AWT;
+import java.awt.Panel;
+import java.awt.BorderLayout;
+import javax.swing.JRootPane;
+import com.toedter.calendar.JDayChooser;
+import org.eclipse.swt.widgets.Combo;
+import javax.swing.JPanel;
+
+public class OpsirnijeExtraWOWsoba {
+	/**
+	 * @wbp.nonvisual location=311,209
+	 */
+
+
+	/**
+	 * Launch the application.
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Display display = Display.getDefault();
+		Shell shell = new Shell();
+		shell.setSize(464, 285);
+		shell.setText("SWT Application");
+		
+		Button btnRezerviraj = new Button(shell, SWT.NONE);
+		btnRezerviraj.setBounds(306, 211, 75, 25);
+		btnRezerviraj.setText("Rezerviraj");
+		
+		Label lblExtraWowSoba = new Label(shell, SWT.NONE);
+		lblExtraWowSoba.setFont(SWTResourceManager.getFont("Segoe UI", 9, SWT.BOLD));
+		lblExtraWowSoba.setBounds(62, 10, 126, 15);
+		lblExtraWowSoba.setText("Extra WOW soba");
+		
+		Label lblNewLabel = new Label(shell, SWT.NONE);
+		lblNewLabel.setBounds(87, 31, 55, 15);
+		lblNewLabel.setText("10x10 m ");
+		
+		Label lblSobaTakoerIma = new Label(shell, SWT.NONE);
+		lblSobaTakoerIma.setBounds(10, 95, 238, 15);
+		lblSobaTakoerIma.setText("Soba tako\u0111er ima le\u017Eaj za samo jednu osobu");
+		
+		Label lblNewLabel_1 = new Label(shell, SWT.NONE);
+		lblNewLabel_1.setBounds(28, 145, 55, 15);
+		lblNewLabel_1.setText("Internet");
+		
+		Label lblOgrtai = new Label(shell, SWT.NONE);
+		lblOgrtai.setBounds(28, 187, 55, 15);
+		lblOgrtai.setText("Ogrta\u010Di");
+		
+		Label lblNewLabel_3 = new Label(shell, SWT.NONE);
+		lblNewLabel_3.setBounds(28, 166, 75, 15);
+		lblNewLabel_3.setText("Mini hladnjak");
+		
+		Label lblKlima = new Label(shell, SWT.NONE);
+		lblKlima.setBounds(177, 145, 55, 15);
+		lblKlima.setText("Klima");
+		
+		Label lblRunici = new Label(shell, SWT.NONE);
+		lblRunici.setBounds(177, 166, 55, 15);
+		lblRunici.setText("Ru\u010Dnici");
+		
+		Label lblTelevizor = new Label(shell, SWT.NONE);
+		lblTelevizor.setBounds(177, 187, 55, 15);
+		lblTelevizor.setText("Televizor");
+		
+		Composite composite = new Composite(shell, SWT.EMBEDDED);
+		composite.setBounds(318, 31, 120, 25);
+		
+		Frame frame = SWT_AWT.new_Frame(composite);
+		
+		Panel panel = new Panel();
+		frame.add(panel);
+		panel.setLayout(new BorderLayout(0, 0));
+		
+		JRootPane rootPane = new JRootPane();
+		panel.add(rootPane);
+		
+		JDateChooser dateChooser = new JDateChooser();
+		rootPane.getContentPane().add(dateChooser, BorderLayout.CENTER);
+		
+		Button btnCheckSauna = new Button(shell, SWT.CHECK);
+		btnCheckSauna.setBounds(277, 132, 60, 16);
+		btnCheckSauna.setText("Sauna\r\n");
+		
+		Button btnCheckDorucak = new Button(shell, SWT.CHECK);
+		btnCheckDorucak.setBounds(343, 132, 93, 16);
+		btnCheckDorucak.setText("Doru\u010Dak\r\n");
+		
+		Button btnCheckBazen = new Button(shell, SWT.CHECK);
+		btnCheckBazen.setBounds(277, 165, 55, 16);
+		btnCheckBazen.setText("Bazen");
+		
+		Button btnCheckVecera = new Button(shell, SWT.CHECK);
+		btnCheckVecera.setBounds(343, 165, 93, 16);
+		btnCheckVecera.setText("Ve\u010Dera");
+		
+		Label lblDvokrevetnaSobaS = new Label(shell, SWT.NONE);
+		lblDvokrevetnaSobaS.setBounds(10, 74, 238, 15);
+		lblDvokrevetnaSobaS.setText("Dvokrevetna soba s pogledom na more");
+		
+		Composite composite_1 = new Composite(shell, SWT.EMBEDDED);
+		composite_1.setBounds(318, 64, 120, 25);
+		
+		Frame frame_1 = SWT_AWT.new_Frame(composite_1);
+		
+		Panel panel_1 = new Panel();
+		frame_1.add(panel_1);
+		panel_1.setLayout(new BorderLayout(0, 0));
+		
+		JRootPane rootPane_1 = new JRootPane();
+		panel_1.add(rootPane_1);
+		
+		JDateChooser dateChooser_1 = new JDateChooser();
+		rootPane_1.getContentPane().add(dateChooser_1, BorderLayout.CENTER);
+		
+		Label lblOd = new Label(shell, SWT.NONE);
+		lblOd.setBounds(277, 31, 35, 15);
+		lblOd.setText("Od");
+		
+		Label lblDo = new Label(shell, SWT.NONE);
+		lblDo.setBounds(277, 74, 35, 15);
+		lblDo.setText("Do");
+		
+		Label lblUsluge = new Label(shell, SWT.NONE);
+		lblUsluge.setFont(SWTResourceManager.getFont("Segoe UI", 9, SWT.BOLD));
+		lblUsluge.setBounds(87, 124, 55, 15);
+		lblUsluge.setText("Usluge");
+
+		shell.open();
+		shell.layout();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch()) {
+				display.sleep();
+			}
+		}
+	
+	}
+}
